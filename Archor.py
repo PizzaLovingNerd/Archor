@@ -44,7 +44,7 @@ elif splash == 3:
     /\  __ \   /\  == \   /\  ___\   /\ \_\ \   /\  __ \   /\  == \   
     \ \  __ \  \ \  __<   \ \ \____  \ \  __ \  \ \ \/\ \  \ \  __<   
      \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_\ \_\  \ \_____\  \ \_\ \_\ 
-      \/_/\/_/   \/_/ /_/   \/_____/   \/_/\/_/   \/_____/   \/_/ /_/ 
+      \/_/\/_/   \/_/ /_/linux/comments/8t9etx/after_6_years_of_linux_all_desktop_environments/   \/_____/   \/_/\/_/   \/_____/   \/_/ /_/ 
                                                                   
     """)
 
@@ -126,12 +126,14 @@ print("""Now it is time to choose a DE/WM... (Select using numbers)
     19) Moksha (AUR)
     20) Openbox
     21) Pantheon
-    22) Ratpoison
-    23) Sugar
-    24) theShell (AUR)
-    25) Trinity
-    26) Unity (Expirmental)
-    27) Xfce
-    28) xmonad
-    29) No Desktop
+    22) Rat0poison
+    23) Sway (i3wm with Wayland)
+    24) Sugar
+    25) theShell (AUR)
+    26) Trinity
+    27) Unity (Expirmental)
+    28) Window Maker
+    29) Xfce
+    30) xmonad
+    31) No Desktop
 """
