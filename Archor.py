@@ -102,3 +102,32 @@ else:
     base-devel? = "base-devel"
     time.sleep(1)
 clear()
+
+# Choose a desktop
+print("""Now it is time to choose a DE/WM... (Select using numbers)
+    1) Awesome
+    2) bspwm
+    3) Budgie (Will also install GNOME)
+    4) Cinnamon
+    5) Deepin
+    6) Enlightenment
+    7) Fluxbox
+    8) GNOME
+    9) i3wm
+    10) KDE Plasma
+    11) Liri (AUR)
+    12) Lumina (AUR)
+    13) LXDE
+    14) LXQT
+    15) MATE
+    16) Moksha (AUR)
+    17) Openbox
+    18) Pantheon
+    19) Ratpoison
+    20) Sugar
+    21) theShell (AUR)
+    22) Trinity
+    23) Xfce
+    24) xmonad
+    25) No Desktop
+"""
