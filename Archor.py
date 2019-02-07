@@ -1,4 +1,4 @@
-#Modules/Libraries
+# Modules/Libraries
 import os
 import sys
 import random
@@ -10,7 +10,7 @@ def clear():  #Clears terminal
     else: os.system("clear")
 
 # Version
-version = "Alpha0.0.1"
+version = "Alpha 0.0.1"
 
 # SPLASH SCREENS (Picks a random one)
 splash = random.randint(1, 5)
