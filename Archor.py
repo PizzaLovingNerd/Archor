@@ -10,7 +10,7 @@ def clear():  #Clears terminal
     else: os.system("clear")
 
 # Version
-version = "Alpha1"
+version = "Alpha0.0.1"
 
 # SPLASH SCREENS (Picks a random one)
 splash = random.randint(1, 5)
