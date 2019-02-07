@@ -110,24 +110,28 @@ print("""Now it is time to choose a DE/WM... (Select using numbers)
     3) Budgie (Will also install GNOME)
     4) Cinnamon
     5) Deepin
-    6) Enlightenment
-    7) Fluxbox
-    8) GNOME
-    9) i3wm
-    10) KDE Plasma
-    11) Liri (AUR)
-    12) Lumina (AUR)
-    13) LXDE
-    14) LXQT
-    15) MATE
-    16) Moksha (AUR)
-    17) Openbox
-    18) Pantheon
-    19) Ratpoison
-    20) Sugar
-    21) theShell (AUR)
-    22) Trinity
-    23) Xfce
-    24) xmonad
-    25) No Desktop
+    6) dwm
+    7) Enlightenment
+    8) Fluxbox
+    9) GNOME
+    10) GNOME Flashback
+    11) i3wm
+    12) ion
+    13) KDE Plasma
+    14) Liri (AUR)
+    15) Lumina (AUR)
+    16) LXDE
+    17) LXQT
+    18) MATE
+    19) Moksha (AUR)
+    20) Openbox
+    21) Pantheon
+    22) Ratpoison
+    23) Sugar
+    24) theShell (AUR)
+    25) Trinity
+    26) Unity (Expirmental)
+    27) Xfce
+    28) xmonad
+    29) No Desktop
 """
