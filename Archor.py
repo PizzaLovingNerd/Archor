@@ -87,134 +87,165 @@ if os.path.isfile(scriptname + ".bash") == True:
 # Generates scriptname.bash
 print("\nGenerating new file")
 script = open(scriptname + ".bash", "w")
+step = 1
 
-# Checks if user wants base-devel
-print("Do you want your script to install base-devel (select using numbers)\n\n1) Yes (Recommended)\n2) No\n")
+while True: #Creates a forever loop (used for back feature)
 
-base-devel? = input()
+    if step == 1:
+        # Checks if user wants base-devel
+        print("Do you want your script to install base-devel (select using numbers)\n\n1) Yes (Recommended)\n2) No\n\n\nb) Back")
 
-clear()
-if base-devel? == "2":
-    print("base-devel disabled")
-    base-devel? = ""
-    time.sleep(1)
-else:
-    print("base-devel enabled")
-    base-devel? = "base-devel"
-    time.sleep(1)
-clear()
+        base-devel? = input()
 
-# Choose a desktop
-print("""Now it is time to choose a DE/WM... (Select using numbers)
-1) Awesome
-2) bspwm
-3) Budgie (Will also install GNOME)
-4) Cinnamon
-5) Deepin
-6) dwm (AUR)
-7) Enlightenment
-8) Fluxbox
-9) GNOME
-10) GNOME Flashback (Will also installed standard GNOME)
-11) i3wm
-12) ion
-13) KDE Plasma
-14) Liri (AUR)
-15) Lumina (AUR)
-16) LXDE
-17) LXQT
-18) MATE
-19) Moksha (AUR)
-20) Openbox
-21) Pantheon
-22) Rat0poison
-23) Sway (i3wm with Wayland)
-24) Sugar
-25) theShell (AUR)
-26) Trinity
-27) Unity (Expirmental)
-28) Window Maker
-29) Xfce
-30) xmonad
-31) No Desktop
+        clear()
+        if base-devel? == "2":
+            print("base-devel disabled")
+            base-devel? = "base"
+            time.sleep(1)
+        else:
+            print("base-devel enabled")
+            base-devel? = "base base-devel"
+            time.sleep(1)
+        clear()
 
-"""
-desktop = input()
-clear()
-      
-if desktop == "1": # Awesome
-    print("Setting desktop to awesome (awesome choice btw)"
-    desktop = "awesome"
+    if step == 2:
+        # Choose a desktop
+        print("""Choose a DE/WM... (Select using numbers)
+        1) Awesome
+        2) bspwm
+        3) Budgie (Will also install GNOME)
+        4) Cinnamon
+        5) Deepin
+        6) dwm (AUR)
+        7) Enlightenment
+        8) Fluxbox
+        9) GNOME
+        10) GNOME Flashback (Will also installed standard GNOME)
+        11) i3-gaps
+        12) i3wm
+        13) ion
+        14) KDE Plasma
+        15) Liri (AUR)
+        16) Lumina (AUR)
+        17) LXDE
+        18) LXQT
+        19) MATE
+        20) Moksha (AUR)
+        21) Openbox
+        22) Pantheon
+        23) Rat0poison
+        24) Sway (i3wm with Wayland)
+        25) Sugar
+        26) theShell (AUR)
+        27) Trinity
+        28) Unity (Expirmental)
+        29) Window Maker
+        30) Xfce
+        31) xmonad
+        32) No Desktop
+        
+        b) Back
+
+        """
+        desktop = input()
+        clear()
+
+        if desktop == "b": # Awesome
+            print("Setting desktop to awesome (awesome choice btw)"
+            desktop = "awesome"
+              
+        if desktop == "1": # Awesome
+            print("Setting desktop to awesome (awesome choice btw)"
+            desktop = "awesome"
+                    
+        elif desktop == "2": # Bspwm
+            print("Setting desktop to bspwm")
+            desktop = "bspwm"
+                    
+        elif desktop == "3": #Budgie (Asks if they want GNOME)
+            clear()
+            print("It's recommended to install GNOME with Budgie. Would you like to install GNOME?\n\n1) Install gnome \n2. Install gnome and gnome-extra (Recommended) \n3) Don't install gnome\n") # Install Budgie with GNOME
+            desktop = input()
+            clear()
+                  
+            if desktop == "1":
+                desktop = "budgie-desktop gnome"
+                print("Setting desktop to budgie + gnome")
+            elif desktop == "2":
+                desktop = "budgie-desktop gnome gnome-extra")
+                print("Setting desktop to budgie + gnome + gnome-extra")
+            else:
+                desktop = "budgie-desktop"
+                print("Setting desktop to budgie")
+              
+        elif desktop == "4": # Cinnamon
+            print("Setting desktop to cinnamon (My favorite spice)")
+            desktop = "cinnamon nemo-fileroller"
+              
+        elif desktop == "5": # Deepin (Asks if they want deepin-extra)
+            print("Would you like to install deepin-extra?\n\n1) Yes (Recommended)\n2) No")
+            desktop = input()
+              
+            if desktop == "2":
+                print("Setting desktop to deepin") # Just Deepin
+                desktop = "deepin"
+            else:
+                print("Setting desktop to deepin + deepin-extra") # Deepin Extra
+                desktop = "deepin deepin-extra"
+                  
+        elif desktop == "6": # dwm
+            # Insert code here
+                  
+        elif desktop == "7": # Enlightenment
+            print("Setting desktop to enlightenment")
+            desktop = "enlightenment terminology"
+
+        elif desktop == "8": # Fluxbox
+            print("Setting desktop to fluxbox")
+            desktop = "fluxbox"
+                  
+        elif desktop == "9": # GNOME
+            print("Would you like to install gnome-extra?\n\n1) Yes (Recommended)\n2) No") # Install gnome-extra?
+            desktop = input()
+              
+            if desktop == "2":
+                print("Setting desktop to gnome") # Install just GNOME
+                desktop = "gnome"
+            else:
+                print("Setting desktop to gnome + gnome-extra") # Installing GNOME-extra
+                desktop = "gnome gnome-extra"
+                  
+        elif desktop == "10": # GNOME Flashback
+            print("Would you like to install gnome-extra?\n\n1) Yes (Recommended)\n2) No") # Install gnome-extra?
+            desktop = input()
             
-elif desktop == "2": # Bspwm
-    print("Setting desktop to bspwm")
-    desktop = "bspwm"
+            if desktop == "2":
+                print("Setting desktop to gnome-flashback + gnome") # Install just GNOME
+                desktop = "gnome-flashback gnome"
+            else:
+                print("Setting desktop to gnome-flashback + gnome + gnome-extra") # Install gnome-extra
+                desktop = "gnome-flashback gnome gnome-extra"
+
+        elif desktop == "10": # GNOME Flashback
+              
+            print("Would you like to install gnome-extra?\n\n1) Yes (Recommended)\n2) No") # Install gnome-extra?
+            desktop = input()
             
-elif desktop == "3": #Budgie (Asks if they want GNOME)
-    clear()
-    print("It's recommended to install GNOME with Budgie. Would you like to install GNOME?\n\n1) Install gnome\n2. Install gnome and gnome-extra\n3) Don't install gnome\n")
-    desktop = input()
-    clear()
-          
-    if desktop == "1":
-        desktop = "budgie-desktop gnome"
-        print("Setting desktop to budgie + gnome")
-    elif desktop == "2":
-        desktop = "budgie-desktop gnome gnome-extra")
-        print("Setting desktop to budgie + gnome + gnome-extra")
-    else:
-        desktop = "budgie-desktop"
-        print("Setting desktop to budgie")
-      
-elif desktop == "4": # Cinnamon
-    print("Setting desktop to cinnamon (My favorite spice)")
-    desktop = "cinnamon nemo-fileroller"
-      
-elif desktop == "5": # Deepin (Asks if they want deepin-extra)
-    print("Would you like to install deepin-extra?\n\n1) Yes (Recommended)\n2) No")
-    desktop = input()
-      
-    if desktop == "2":
-        print("Setting desktop to deepin")
-	desktop = "deepin"
-    else:
-	print("Setting desktop to deepin + deepin-extra")
-        desktop = "deepin deepin-extra"
-	  
-elif desktop == "6": # dwm
-    # Insert code here
-	  
-elif desktop == "7": # Enlightenment
-    print("Setting desktop to enlightenment")
-    desktop = "enlightenment terminology"
+            if desktop == "2":
+                print("Setting desktop to gnome-flashback + gnome") # Install just GNOME
+                desktop = "gnome-flashback gnome"
+            else:
+                print("Setting desktop to gnome-flashback + gnome + gnome-extra") # Install gnome-extra
+                desktop = "gnome-flashback gnome gnome-extra"
 
-elif desktop == "8": # Fluxbox
-    print("Setting desktop to fluxbox")
-    desktop = "fluxbox"
-	  
-elif desktop == "9": # GNOME
-    print("Would you like to install gnome-extra?\n\n1) Yes (Recommended)\n2) No")
-    desktop = input()
-      
-    if desktop == "2":
-        print("Setting desktop to gnome")
-        desktop = "gnome"
-    else:
+        elif desktop = "11": # i3-gaps
+            print("Setting desktop to i3-gaps")
+            desktop  = "i3-gaps"
 
-	print("Setting desktop to gnome + gnome-extra")
-        desktop = "gnome gnome-extra"
-	  
-elif desktop == "10": # GNOME FLashback
-    print("Would you like to install gnome-extra?\n\n1) Yes (Recommended)\n2) No")
-    desktop = input()
-    
-    if desktop == "2":
-        print("Setting desktop to gnome-flashback + gnome")
-	desktop = "gnome-flashback gnome"
-    else:
-	print("Setting desktop to gnome-flashback + gnome + gnome-extra")
-        desktop = "gnome-flashback gnome gnome-extra"
-	  
-time.sleep(1)
+        elif desktop = "12": # i3wm
+            print("Setting desktop to i3-gaps")
+            desktop  = "i3wm"
+            
+        time.sleep(1)
       
 
