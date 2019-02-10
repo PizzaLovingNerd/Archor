@@ -95,16 +95,16 @@ while True: #Creates a forever loop (used for back feature)
         # Checks if user wants base-devel
         print("Do you want your script to install base-devel (select using numbers)\n\n1) Yes (Recommended)\n2) No\n\n\nb) Back")
 
-        base-devel? = input()
+        base = input()
 
         clear()
-        if base-devel? == "2":
+        if base-devel == "2":
             print("base-devel disabled")
-            base-devel? = "base"
+            base = "base"
             time.sleep(1)
         else:
             print("base-devel enabled")
-            base-devel? = "base base-devel"
+            base = "base base-devel"
             time.sleep(1)
         clear()
 
@@ -146,16 +146,16 @@ while True: #Creates a forever loop (used for back feature)
         
         b) Back
 
-        """
+        """)
+              
         desktop = input()
         clear()
 
         if desktop == "b": # Awesome
-            print("Setting desktop to awesome (awesome choice btw)"
-            desktop = "awesome"
+            step = 1
               
         if desktop == "1": # Awesome
-            print("Setting desktop to awesome (awesome choice btw)"
+            print("Setting desktop to awesome (awesome choice btw)")
             desktop = "awesome"
                     
         elif desktop == "2": # Bspwm
@@ -172,7 +172,7 @@ while True: #Creates a forever loop (used for back feature)
                 desktop = "budgie-desktop gnome"
                 print("Setting desktop to budgie + gnome")
             elif desktop == "2":
-                desktop = "budgie-desktop gnome gnome-extra")
+                desktop = "budgie-desktop gnome gnome-extra"
                 print("Setting desktop to budgie + gnome + gnome-extra")
             else:
                 desktop = "budgie-desktop"
@@ -195,6 +195,7 @@ while True: #Creates a forever loop (used for back feature)
                   
         elif desktop == "6": # dwm
             # Insert code here
+            print("AUR package, not added yet")
                   
         elif desktop == "7": # Enlightenment
             print("Setting desktop to enlightenment")
@@ -238,11 +239,11 @@ while True: #Creates a forever loop (used for back feature)
                 print("Setting desktop to gnome-flashback + gnome + gnome-extra") # Install gnome-extra
                 desktop = "gnome-flashback gnome gnome-extra"
 
-        elif desktop = "11": # i3-gaps
+        elif desktop == "11": # i3-gaps
             print("Setting desktop to i3-gaps")
             desktop  = "i3-gaps"
 
-        elif desktop = "12": # i3wm
+        elif desktop == "12": # i3wm
             print("Setting desktop to i3-gaps")
             desktop  = "i3wm"
             
