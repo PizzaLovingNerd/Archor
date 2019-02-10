@@ -207,7 +207,7 @@ elif desktop == "9": # GNOME
 elif desktop == "10": # GNOME FLashback
     print("Would you like to install gnome-extra?\n\n1) Yes (Recommended)\n2) No")
     desktop = input()
-      
+    
     if desktop == "2":
         print("Setting desktop to gnome-flashback + gnome")
 	desktop = "gnome-flashback gnome"
