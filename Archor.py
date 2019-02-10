@@ -1,8 +1,9 @@
-# Modules/Libraries
+# Modules/Libraries and some Variables
 import os
 import sys
 import random
 import time
+import string   
 
 # Functions:
 def clear():  #Clears terminal
@@ -29,7 +30,8 @@ if splash == 1:
     """)
     
 elif splash == 2:
-    print("""       _               
+    print("""
+                        _               
          /\            | |               
         /  \   _ __ ___| |__   ___  _ __ 
        / /\ \ | '__/ __| '_ \ / _ \| '__|
@@ -71,16 +73,17 @@ elif splash == 5:
           ░  ░   ░     ░ ░       ░  ░  ░    ░ ░     ░     
                        ░
     """)
-print("Archor Version:" + version)
-time.sleep(3)
+print("Archor Version: " + version)
+time.sleep(1)
+clear()
 
 # Welcome Screen + Script Name
-print("Welcome to Archor, the easy to use Arch Linux install script generator. This was made by PizzaLovingNerd, Archor also uses code from NekoBit's Archkick\nNote, Archor is in beta. PizzaLovingNerd is not responsible for any damages caused to your system(s) from any generated script.\n\nWithout spaces, please type the name of the script (ex: MyArchInstaller)\n")
+print("Welcome to Archor, the easy to use Arch Linux install script generator.\nThis was made by PizzaLovingNerd, Archor also uses code from NekoBit's Archkick\nNote, Archor is in alpha. PizzaLovingNerd is not responsible for any damages caused to your system(s) from any generated script.\n\nWithout spaces (or special charactors), please type the name of the script (ex: MyArchInstaller)\n")
 scriptname = input()
 
 # Detects if scriptname.bash exists
 if os.path.isfile(scriptname + ".bash") == True:
-    print('Error: File already exists, please delete "' + scriptname + '.bash", or choose a different name for the script to continue.\n\nPlease press enter to close Archor')
+    print('Error: File already exists, please delete "' + scriptname + '.bash", or choose a different name for the script to continue.\n\nPlease press enter to close Archor\n')
     input()
     sys.exit()
 
@@ -93,12 +96,12 @@ while True: #Creates a forever loop (used for back feature)
 
     if step == 1:
         # Checks if user wants base-devel
-        print("Do you want your script to install base-devel (select using numbers)\n\n1) Yes (Recommended)\n2) No\n\n\nb) Back")
+        print("Do you want your script to install base-devel (select using numbers)\n\n1) Yes (Recommended)\n2) No")
 
         base = input()
 
         clear()
-        if base-devel == "2":
+        if base == "2":
             print("base-devel disabled")
             base = "base"
             time.sleep(1)
@@ -106,6 +109,7 @@ while True: #Creates a forever loop (used for back feature)
             print("base-devel enabled")
             base = "base base-devel"
             time.sleep(1)
+        step = 2
         clear()
 
     if step == 2:
