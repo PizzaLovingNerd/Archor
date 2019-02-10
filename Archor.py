@@ -143,72 +143,77 @@ desktop = input()
 clear()
       
 if desktop == "1": # Awesome
-      print("Setting desktop to awesome (awesome choice btw)"
-      desktop = "awesome"
+    print("Setting desktop to awesome (awesome choice btw)"
+    desktop = "awesome"
             
 elif desktop == "2": # Bspwm
-      print("Setting desktop to bspwm")
-      desktop = "bspwm"
+    print("Setting desktop to bspwm")
+    desktop = "bspwm"
             
 elif desktop == "3": #Budgie (Asks if they want GNOME)
-      clear()
-      print("It's recommended to install GNOME with Budgie. Would you like to install GNOME?\n\n1) Install gnome\n2. Install gnome and gnome-extra\n3) Don't install gnome\n")
-      desktop = input()
-      clear()
-      if desktop == "1":
-            desktop = "budgie-desktop gnome"
-            print("Setting desktop to budgie + gnome")
-      elif desktop == "2":
-            desktop = "budgie-desktop gnome gnome-extra")
-            print("Setting desktop to budgie + gnome + gnome-extra")
-      else:
-            desktop = "budgie-desktop"
-            print("Setting desktop to budgie")
+    clear()
+    print("It's recommended to install GNOME with Budgie. Would you like to install GNOME?\n\n1) Install gnome\n2. Install gnome and gnome-extra\n3) Don't install gnome\n")
+    desktop = input()
+    clear()
+          
+    if desktop == "1":
+        desktop = "budgie-desktop gnome"
+        print("Setting desktop to budgie + gnome")
+    elif desktop == "2":
+        desktop = "budgie-desktop gnome gnome-extra")
+        print("Setting desktop to budgie + gnome + gnome-extra")
+    else:
+        desktop = "budgie-desktop"
+        print("Setting desktop to budgie")
       
 elif desktop == "4": # Cinnamon
-      print("Setting desktop to cinnamon (My favorite spice)")
-      desktop = "cinnamon nemo-fileroller"
+    print("Setting desktop to cinnamon (My favorite spice)")
+    desktop = "cinnamon nemo-fileroller"
       
 elif desktop == "5": # Deepin (Asks if they want deepin-extra)
-      print("Would you like to install deepin-extra?\n\n1) Yes (Recommended)\n2) No")
-      desktop = input()
-      if desktop == "2":
-            print("Setting desktop to deepin")
-	  		desktop = "deepin"
-	  else:
-	  		print("Setting desktop to deepin + deepin-extra")
-            desktop = "deepin deepin-extra"
+    print("Would you like to install deepin-extra?\n\n1) Yes (Recommended)\n2) No")
+    desktop = input()
+      
+    if desktop == "2":
+        print("Setting desktop to deepin")
+	desktop = "deepin"
+    else:
+	print("Setting desktop to deepin + deepin-extra")
+        desktop = "deepin deepin-extra"
 	  
 elif desktop == "6": # dwm
-	  # Insert code here
+    # Insert code here
 	  
 elif desktop == "7": # Enlightenment
-	  print("Setting desktop to enlightenment")
-	  desktop = "enlightenment terminology"
+    print("Setting desktop to enlightenment")
+    desktop = "enlightenment terminology"
 
 elif desktop == "8": # Fluxbox
-	  print("Setting desktop to fluxbox")
-	  desktop = "fluxbox"
+    print("Setting desktop to fluxbox")
+    desktop = "fluxbox"
 	  
 elif desktop == "9": # GNOME
-	  print("Would you like to install gnome-extra?\n\n1) Yes (Recommended)\n2) No")
-      desktop = input()
-      if desktop == "2":
-            print("Setting desktop to gnome")
-	  		desktop = "gnome"
-	  else:
-	  		print("Setting desktop to gnome + gnome-extra")
-            desktop = "gnome gnome-extra"
+    print("Would you like to install gnome-extra?\n\n1) Yes (Recommended)\n2) No")
+    desktop = input()
+      
+    if desktop == "2":
+        print("Setting desktop to gnome")
+        desktop = "gnome"
+    else:
+
+	print("Setting desktop to gnome + gnome-extra")
+        desktop = "gnome gnome-extra"
 	  
 elif desktop == "10": # GNOME FLashback
-	  print("Would you like to install gnome-extra?\n\n1) Yes (Recommended)\n2) No")
-      desktop = input()
-      if desktop == "2":
-            print("Setting desktop to gnome-flashback + gnome")
-	  		desktop = "gnome-flashback gnome"
-	  else:
-	  		print("Setting desktop to gnome-flashback + gnome + gnome-extra")
-            desktop = "gnome-flashback gnome gnome-extra"
+    print("Would you like to install gnome-extra?\n\n1) Yes (Recommended)\n2) No")
+    desktop = input()
+      
+    if desktop == "2":
+        print("Setting desktop to gnome-flashback + gnome")
+	desktop = "gnome-flashback gnome"
+    else:
+	print("Setting desktop to gnome-flashback + gnome + gnome-extra")
+        desktop = "gnome-flashback gnome gnome-extra"
 	  
 time.sleep(1)
       
