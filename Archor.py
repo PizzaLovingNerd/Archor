@@ -231,18 +231,6 @@ while True: #Creates a forever loop (used for back feature)
                 print("Setting desktop to gnome-flashback + gnome + gnome-extra") # Install gnome-extra
                 desktop = "gnome-flashback gnome gnome-extra"
 
-        elif desktop == "10": # GNOME Flashback
-              
-            print("Would you like to install gnome-extra?\n\n1) Yes (Recommended)\n2) No") # Install gnome-extra?
-            desktop = input()
-            
-            if desktop == "2":
-                print("Setting desktop to gnome-flashback + gnome") # Install just GNOME
-                desktop = "gnome-flashback gnome"
-            else:
-                print("Setting desktop to gnome-flashback + gnome + gnome-extra") # Install gnome-extra
-                desktop = "gnome-flashback gnome gnome-extra"
-
         elif desktop == "11": # i3-gaps
             print("Setting desktop to i3-gaps")
             desktop  = "i3-gaps"
@@ -250,7 +238,57 @@ while True: #Creates a forever loop (used for back feature)
         elif desktop == "12": # i3wm
             print("Setting desktop to i3-gaps")
             desktop  = "i3wm"
+			
+		elif desktop == "13": # ion
+            # Insert code here
+            print("AUR package, not added yet")
+			
+		elif desktop == "14": # KDE Plasma
+		print("Would you like to install kde-applications?\n\n1) Yes (Recommended)\n2) No") # Install kde-applications?
+            desktop = input()
             
+            if desktop == "2":
+                print("Setting desktop to plasma") # Install just GNOME
+                desktop = "plasma"
+            else:
+                print("Setting desktop to plasma + kde-applications") # Install gnome-extra
+                desktop = "plasma kde-applications"
+		
+		elif desktop == "15": # Liri
+            # Insert code here
+            print("AUR package, not added yet")
+            
+		elif desktop == "16": # Lumina
+            # Insert code here
+            print("AUR package, not added yet")
+			
+		elif desktop == "17": # LXDE
+			print("Setting desktop to lxde")
+			desktop = "lxde"
+			
+		elif desktop == "18": # LXQT
+			print("Setting desktop to lxqt")
+			desktop = "lxqt breeze-icons"
+			
+		elif desktop == "19": # MATE
+            print("Would you like to install mate-extra?\n\n1) Yes (Recommended)\n2) No") # Install gnome-extra?
+            desktop = input()
+              
+            if desktop == "2":
+                print("Setting desktop to mate") # Install just MATE
+                desktop = "mate"
+            else:
+                print("Setting desktop to mate + mate-extra") # Installing MATE-extra
+                desktop = "mate mate-extra"
+				
+		elif desktop == "20": # Moksha
+            # Insert code here
+            print("AUR package, not added yet")
+			
+		elif desktop == "21": # OpenBox
+			print("Setting desktop to Openbox")
+			desktop = "openbox"
+			
         time.sleep(1)
       
 
