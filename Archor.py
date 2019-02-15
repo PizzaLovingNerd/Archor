@@ -239,12 +239,12 @@ while True: #Creates a forever loop (used for back feature)
             print("Setting desktop to i3-gaps")
             desktop  = "i3wm"
 			
-		elif desktop == "13": # ion
+	elif desktop == "13": # ion
             # Insert code here
             print("AUR package, not added yet")
 			
-		elif desktop == "14": # KDE Plasma
-		print("Would you like to install kde-applications?\n\n1) Yes (Recommended)\n2) No") # Install kde-applications?
+	elif desktop == "14": # KDE Plasma
+            print("Would you like to install kde-applications?\n\n1) Yes (Recommended)\n2) No") # Install kde-applications?
             desktop = input()
             
             if desktop == "2":
@@ -254,23 +254,23 @@ while True: #Creates a forever loop (used for back feature)
                 print("Setting desktop to plasma + kde-applications") # Install gnome-extra
                 desktop = "plasma kde-applications"
 		
-		elif desktop == "15": # Liri
+	elif desktop == "15": # Liri
             # Insert code here
             print("AUR package, not added yet")
             
-		elif desktop == "16": # Lumina
+	elif desktop == "16": # Lumina
             # Insert code here
             print("AUR package, not added yet")
 			
-		elif desktop == "17": # LXDE
-			print("Setting desktop to lxde")
-			desktop = "lxde"
+	elif desktop == "17": # LXDE
+	    print("Setting desktop to lxde")
+	    desktop = "lxde"
 			
-		elif desktop == "18": # LXQT
-			print("Setting desktop to lxqt")
-			desktop = "lxqt breeze-icons"
+	elif desktop == "18": # LXQT
+            print("Setting desktop to lxqt")
+	    desktop = "lxqt breeze-icons"
 			
-		elif desktop == "19": # MATE
+	elif desktop == "19": # MATE
             print("Would you like to install mate-extra?\n\n1) Yes (Recommended)\n2) No") # Install gnome-extra?
             desktop = input()
               
@@ -281,7 +281,7 @@ while True: #Creates a forever loop (used for back feature)
                 print("Setting desktop to mate + mate-extra") # Installing MATE-extra
                 desktop = "mate mate-extra"
 				
-		elif desktop == "20": # Moksha
+	elif desktop == "20": # Moksha
             # Insert code here
             print("AUR package, not added yet")
 			
