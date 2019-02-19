@@ -290,5 +290,3 @@ while True: #Creates a forever loop (used for back feature)
 			desktop = "openbox"
 			
         time.sleep(1)
-      
-
