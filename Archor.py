@@ -14,7 +14,7 @@ def clear():  #Clears terminal
 version = "Alpha 0.0.1"
 
 # SPLASH SCREENS (Picks a random one)
-splash = random.randint(1, 5)
+splash = random.randint(1, 4)
 
 if splash == 1:
     print("""
@@ -59,19 +59,6 @@ elif splash == 4:
     ██║  ██║██║  ██║╚██████╗██║  ██║╚██████╔╝██║  ██║
     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝
 
-    """)
-elif splash == 5:
-    print("""
-     ▄▄▄       ██▀███   ▄████▄   ██░ ██  ▒█████   ██▀███  
-    ▒████▄    ▓██ ▒ ██▒▒██▀ ▀█  ▓██░ ██▒▒██▒  ██▒▓██ ▒ ██▒
-    ▒██  ▀█▄  ▓██ ░▄█ ▒▒▓█    ▄ ▒██▀▀██░▒██░  ██▒▓██ ░▄█ ▒
-    ░██▄▄▄▄██ ▒██▀▀█▄  ▒▓▓▄ ▄██▒░▓█ ░██ ▒██   ██░▒██▀▀█▄  
-     ▓█   ▓██▒░██▓ ▒██▒▒ ▓███▀ ░░▓█▒░██▓░ ████▓▒░░██▓ ▒██▒
-     ▒▒   ▓▒█░░ ▒▓ ░▒▓░░ ░▒ ▒  ░ ▒ ░░▒░▒░ ▒░▒░▒░ ░ ▒▓ ░▒▓░
-      ▒   ▒▒ ░  ░▒ ░ ▒░  ░  ▒    ▒ ░▒░ ░  ░ ▒ ▒░   ░▒ ░ ▒░
-      ░   ▒     ░░   ░ ░         ░  ░░ ░░ ░ ░ ▒    ░░   ░ 
-          ░  ░   ░     ░ ░       ░  ░  ░    ░ ░     ░     
-                       ░
     """)
 print("Archor Version: " + version)
 time.sleep(1)
@@ -136,8 +123,8 @@ while True: #Creates a forever loop (used for back feature)
         19) MATE
         20) Moksha (AUR)
         21) Openbox
-        22) Pantheon
-        23) Rat0poison
+        22) Pantheon (AUR)
+        23) Ratpoison
         24) Sway (i3wm with Wayland)
         25) Sugar
         26) theShell (AUR)
@@ -147,31 +134,31 @@ while True: #Creates a forever loop (used for back feature)
         30) Xfce
         31) xmonad
         32) No Desktop
-        
+
         b) Back
 
         """)
-              
+
         desktop = input()
         clear()
 
-        if desktop == "b": # Awesome
+        if desktop == "b": # Back
             step = 1
-              
+
         if desktop == "1": # Awesome
             print("Setting desktop to awesome (awesome choice btw)")
             desktop = "awesome"
-                    
+
         elif desktop == "2": # Bspwm
             print("Setting desktop to bspwm")
             desktop = "bspwm"
-                    
+
         elif desktop == "3": #Budgie (Asks if they want GNOME)
             clear()
             print("It's recommended to install GNOME with Budgie. Would you like to install GNOME?\n\n1) Install gnome \n2. Install gnome and gnome-extra (Recommended) \n3) Don't install gnome\n") # Install Budgie with GNOME
             desktop = input()
             clear()
-                  
+
             if desktop == "1":
                 desktop = "budgie-desktop gnome"
                 print("Setting desktop to budgie + gnome")
@@ -181,26 +168,26 @@ while True: #Creates a forever loop (used for back feature)
             else:
                 desktop = "budgie-desktop"
                 print("Setting desktop to budgie")
-              
+
         elif desktop == "4": # Cinnamon
             print("Setting desktop to cinnamon (My favorite spice)")
             desktop = "cinnamon nemo-fileroller"
-              
+
         elif desktop == "5": # Deepin (Asks if they want deepin-extra)
             print("Would you like to install deepin-extra?\n\n1) Yes (Recommended)\n2) No")
             desktop = input()
-              
+
             if desktop == "2":
                 print("Setting desktop to deepin") # Just Deepin
                 desktop = "deepin"
             else:
                 print("Setting desktop to deepin + deepin-extra") # Deepin Extra
                 desktop = "deepin deepin-extra"
-                  
+
         elif desktop == "6": # dwm
             # Insert code here
             print("AUR package, not added yet")
-                  
+
         elif desktop == "7": # Enlightenment
             print("Setting desktop to enlightenment")
             desktop = "enlightenment terminology"
@@ -208,22 +195,22 @@ while True: #Creates a forever loop (used for back feature)
         elif desktop == "8": # Fluxbox
             print("Setting desktop to fluxbox")
             desktop = "fluxbox"
-                  
+
         elif desktop == "9": # GNOME
             print("Would you like to install gnome-extra?\n\n1) Yes (Recommended)\n2) No") # Install gnome-extra?
             desktop = input()
-              
+
             if desktop == "2":
                 print("Setting desktop to gnome") # Install just GNOME
                 desktop = "gnome"
             else:
                 print("Setting desktop to gnome + gnome-extra") # Installing GNOME-extra
                 desktop = "gnome gnome-extra"
-                  
+
         elif desktop == "10": # GNOME Flashback
             print("Would you like to install gnome-extra?\n\n1) Yes (Recommended)\n2) No") # Install gnome-extra?
             desktop = input()
-            
+
             if desktop == "2":
                 print("Setting desktop to gnome-flashback + gnome") # Install just GNOME
                 desktop = "gnome-flashback gnome"
@@ -238,55 +225,78 @@ while True: #Creates a forever loop (used for back feature)
         elif desktop == "12": # i3wm
             print("Setting desktop to i3-gaps")
             desktop  = "i3wm"
-			
-	elif desktop == "13": # ion
+
+	    elif desktop == "13": # ion
             # Insert code here
             print("AUR package, not added yet")
-			
-	elif desktop == "14": # KDE Plasma
+
+	    elif desktop == "14": # KDE Plasma
             print("Would you like to install kde-applications?\n\n1) Yes (Recommended)\n2) No") # Install kde-applications?
             desktop = input()
-            
+
             if desktop == "2":
                 print("Setting desktop to plasma") # Install just GNOME
                 desktop = "plasma"
             else:
                 print("Setting desktop to plasma + kde-applications") # Install gnome-extra
-                desktop = "plasma kde-applications"
-		
-	elif desktop == "15": # Liri
+                    desktop = "plasma kde-applications"
+
+	    elif desktop == "15": # Liri
             # Insert code here
             print("AUR package, not added yet")
-            
-	elif desktop == "16": # Lumina
+
+	    elif desktop == "16": # Lumina
             # Insert code here
-            print("AUR package, not added yet")
-			
-	elif desktop == "17": # LXDE
-	    print("Setting desktop to lxde")
-	    desktop = "lxde"
-			
-	elif desktop == "18": # LXQT
+               print("AUR package, not added yet")
+
+	    elif desktop == "17": # LXDE
+	        print("Setting desktop to lxde")
+	        desktop = "lxde"
+
+	    elif desktop == "18": # LXQT
             print("Setting desktop to lxqt")
-	    desktop = "lxqt breeze-icons"
-			
-	elif desktop == "19": # MATE
-            print("Would you like to install mate-extra?\n\n1) Yes (Recommended)\n2) No") # Install gnome-extra?
+	        desktop = "lxqt breeze-icons"
+
+	    elif desktop == "19": # MATE
+            print("Would you like to install mate-extra?\n\n1) Yes (Recommended)\n2) No") # Install mate-extra?
             desktop = input()
-              
+
             if desktop == "2":
                 print("Setting desktop to mate") # Install just MATE
                 desktop = "mate"
             else:
                 print("Setting desktop to mate + mate-extra") # Installing MATE-extra
                 desktop = "mate mate-extra"
-				
-	elif desktop == "20": # Moksha
+
+	    elif desktop == "20": # Moksha
+            # Insert code here
+            print("AUR package, not added yet") 
+
+	    elif desktop == "21": # OpenBox
+		    print("Setting desktop to Openbox")
+		    desktop = "openbox"
+
+        elif desktop == "22": # Pantheon
             # Insert code here
             print("AUR package, not added yet")
-			
-		elif desktop == "21": # OpenBox
-			print("Setting desktop to Openbox")
-			desktop = "openbox"
-			
+
+        elif desktop == "23": # Ratpoison
+            print("Setting desktop to Ratpoison")
+		    desktop = "ratpoison"
+
+        elif desktop == "24": # Sway
+            print("Setting desktop to Sway")
+            desktop = "sway"
+
+        elif desktop == "25": # Sugar
+            print("Would you like to install sugar-fructice?\n\n1) Yes (Recommended)\n2) No") # Install sugar-fructice?
+            desktop = input()
+
+            if desktop == "2":
+                print("Setting desktop to sugar") # Install just Sugar
+                desktop = "sugar sugar-runner webkit2gtk"
+            else:
+                print("Setting desktop to sugar + sugar-fructice") # Installing Sugar Fructice
+                desktop = "sugar sugar-runner sugar-fructice webkit2gtk"
+
         time.sleep(1)
