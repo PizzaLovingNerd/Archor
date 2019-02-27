@@ -273,8 +273,8 @@ while True: #Creates a forever loop (used for back feature)
             print("AUR package, not added yet") 
 
 	    elif desktop == "21": # OpenBox
-		    print("Setting desktop to Openbox")
-		    desktop = "openbox"
+			print("Setting desktop to Openbox")
+	    	desktop = "openbox"
 
         elif desktop == "22": # Pantheon
             # Insert code here
@@ -298,5 +298,43 @@ while True: #Creates a forever loop (used for back feature)
             else:
                 print("Setting desktop to sugar + sugar-fructice") # Installing Sugar Fructice
                 desktop = "sugar sugar-runner sugar-fructice webkit2gtk"
+				
+		elif desktop == "26": # theShell
+            # Insert code here
+            print("AUR package, not added yet")
+			
+		elif desktop == "27": # Trinity
+			print("Setting desktop to Trinity")
+			
+			# Add
+			# [trinity]
+			# Server = https://repo.nasutek.com/arch/contrib/trinity/x86_64
+			# to /etc/pacman.conf
+			
+			desktop = "trinity"
+			
+		elif desktop == "28": # Unity 
+			print("Setting desktop to Unity")
+			
+			# Commands for Unity
+			# git clone https://github.com/chenxiaolong/Unity-for-Arch.git
+			# cd Unity-for-Arch
+			# makepkg -sci
+			# Other stuff to install
+			
+            print("It's recommended to install GNOME with Unity. Would you like to install GNOME?\n\n1) Install gnome \n2. Install gnome and gnome-extra (Recommended) \n3) Don't install gnome\n") # Install Unity with GNOME
+            desktop = input()
+            clear()
 
+            if desktop == "1":
+                desktop = "unity-gnome"
+                print("Setting desktop to unity + gnome")
+            elif desktop == "2":
+                desktop = "unity-gnome-extra"
+                print("Setting desktop to unity + gnome + gnome-extra")
+            else:
+                desktop = "unity"
+                print("Setting desktop to unity")
+			
+			
         time.sleep(1)
