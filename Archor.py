@@ -130,7 +130,7 @@ while True: #Creates a forever loop (used for back feature)
         26) theShell (AUR)
         27) Trinity
         28) Unity (Expirmental)
-        29) Window Maker
+        29) Window Maker (AUR)
         30) Xfce
         31) xmonad
         32) No Desktop
@@ -336,5 +336,35 @@ while True: #Creates a forever loop (used for back feature)
                 desktop = "unity"
                 print("Setting desktop to unity")
 			
-			
+		elif desktop == "29": # Window Maker
+			# Insert code here
+            print("AUR package, not added yet")
+            
+        elif desktop == "30": # xfce4
+			print("Would you like to install xfce4-goodies?\n\n1) Yes (Recommended)\n2) No") # Install xfce4-goodies?
+            desktop = input()
+
+            if desktop == "2":
+                print("Setting desktop to xfce4") # Install just MATE
+                desktop = "xfce4"
+            else:
+                print("Setting desktop to xfce4 + xfce4-goodies") # Installing MATE-extra
+                desktop = "xfce4 xfce4-goodies"
+                
+        elif desktop == "31": #xmonad
+			print("Would you like to install xmonad?\n\n1) Yes (Recommended)\n2) No") # Install xmodad?
+            desktop = input()
+
+            if desktop == "2":
+                print("Setting desktop to xmonad") # Install just xmonad
+                desktop = "xmonad"
+            else:
+                print("Setting desktop to xmonad + xmonad-contrib") # Installing xmonad
+                desktop = "xmonad xmonad-contrib"
+                
+        elif desktop == "b":
+			step = 1
+        else:
+			print("Setting desktop to none")
+			desktop = ""
         time.sleep(1)
