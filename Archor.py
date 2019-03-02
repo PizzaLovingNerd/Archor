@@ -9,9 +9,10 @@ import string
 def clear():  #Clears terminal
     if os.name == "nt": os.system("cls")
     else: os.system("clear")
+AUR = 0
 
 # Version
-version = "Alpha 0.0.1"
+version = "Commit 20"
 
 # SPLASH SCREENS (Picks a random one)
 splash = random.randint(1, 4)
@@ -101,7 +102,7 @@ while True: #Creates a forever loop (used for back feature)
 
     if step == 2:
         # Choose a desktop
-        print("""Choose a DE/WM... (Select using numbers)
+        print("""Choose a DE/WM... (Select using numbers) (Note: AUR packages currently do not work)
         1) Awesome
         2) bspwm
         3) Budgie (Will also install GNOME)
@@ -185,7 +186,7 @@ while True: #Creates a forever loop (used for back feature)
                 desktop = "deepin deepin-extra"
 
         elif desktop == "6": # dwm
-            # Insert code here
+            AUR = 1
             print("AUR package, not added yet")
 
         elif desktop == "7": # Enlightenment
@@ -227,7 +228,7 @@ while True: #Creates a forever loop (used for back feature)
             desktop  = "i3wm"
 
 	    elif desktop == "13": # ion
-            # Insert code here
+            AUR = 1
             print("AUR package, not added yet")
 
 	    elif desktop == "14": # KDE Plasma
@@ -242,12 +243,12 @@ while True: #Creates a forever loop (used for back feature)
                     desktop = "plasma kde-applications"
 
 	    elif desktop == "15": # Liri
-            # Insert code here
+            AUR = 1
             print("AUR package, not added yet")
 
 	    elif desktop == "16": # Lumina
-            # Insert code here
-               print("AUR package, not added yet")
+			AUR = 1
+            print("AUR package, not added yet")
 
 	    elif desktop == "17": # LXDE
 	        print("Setting desktop to lxde")
@@ -269,7 +270,7 @@ while True: #Creates a forever loop (used for back feature)
                 desktop = "mate mate-extra"
 
 	    elif desktop == "20": # Moksha
-            # Insert code here
+            AUR = 1
             print("AUR package, not added yet") 
 
 	    elif desktop == "21": # OpenBox
@@ -277,7 +278,7 @@ while True: #Creates a forever loop (used for back feature)
 	    	desktop = "openbox"
 
         elif desktop == "22": # Pantheon
-            # Insert code here
+			AUR = 1
             print("AUR package, not added yet")
 
         elif desktop == "23": # Ratpoison
@@ -300,7 +301,7 @@ while True: #Creates a forever loop (used for back feature)
                 desktop = "sugar sugar-runner sugar-fructice webkit2gtk"
 				
 		elif desktop == "26": # theShell
-            # Insert code here
+            AUR = 1
             print("AUR package, not added yet")
 			
 		elif desktop == "27": # Trinity
@@ -337,7 +338,7 @@ while True: #Creates a forever loop (used for back feature)
                 print("Setting desktop to unity")
 			
 		elif desktop == "29": # Window Maker
-			# Insert code here
+			AUR = 1
             print("AUR package, not added yet")
             
         elif desktop == "30": # xfce4
@@ -362,9 +363,226 @@ while True: #Creates a forever loop (used for back feature)
                 print("Setting desktop to xmonad + xmonad-contrib") # Installing xmonad
                 desktop = "xmonad xmonad-contrib"
                 
-        elif desktop == "b":
-			step = 1
+        elif desktop == "b": step = 1 # Back
+        
         else:
 			print("Setting desktop to none")
 			desktop = ""
-        time.sleep(1)
+		
+		time.sleep(1)
+		clear()
+		step = 3
+			
+	if step == 3:
+        # Choose a browser
+        print("""Choose a Web Browser... (Select using numbers) (Note: AUR packages currently do not work)
+        1) Basilisk (AUR)
+        2) Beaker Broswer (AUR)
+        3) Brave (AUR)
+        4) Crusta (AUR)
+        5) Chromium
+        6) Cliqz (AUR)
+        7) Cyberfox (AUR)
+        8) Dooble (AUR)
+        9) Eolie
+        10) Eric
+        11) Falkon
+        12) Firefox
+        13) GNOME Web (Epiphany) (Preinstalled with GNOME)
+        14) GNU IceCat (AUR)
+        15) Google Chrome (AUR)
+        16) Inox (AUR)
+        17) Iridium (AUR)
+        18) Konqueror
+        19) Liri (AUR)
+        20) Midori
+        21) Min
+        22) Opera
+        23) Otter (AUR)
+        24) Palemoon
+        25) qutebrowser
+        26) Seamonkey
+        27) Slimjet (AUR)
+        28) Surf
+        29) Ungoogled Chromium (AUR)
+        30) Vivaldi (AUR)
+        31) Waterfox (AUR)
+        32) No Web browser
+        b) Back
+        """)
+        
+		browser = input("")
+		clear()
+		
+		if browser == "1": # Basilisk
+			AUR = 1
+			print("AUR Package, not added yet")
+			
+		if browser == "2": # Beaker
+			AUR = 1
+			print("AUR Package, not added yet")
+		
+		if browser == "3": # Brave
+			AUR = 1
+			print("AUR Package, not added yet")
+		
+		if browser == "4": # Crusta
+			AUR = 1
+			print("AUR Package, not added yet")
+		
+		if browser == "5": # Chromium
+			print("Setting browser to Chromium")
+			browser = "chromium"
+		
+		if browser == "6": # Cliqz
+			AUR = 1
+			print("AUR Package, not added yet")
+		
+		if browser == "7": # Cyberfox
+			AUR = 1
+			print("AUR Package, not added yet")
+			
+		if browser == "8": # Dooble
+			AUR = 1
+			print("AUR Package, not added yet")
+			
+		if browser = "9": # Eolie
+			print("Setting browser to Eolie")
+			browser = "eolie"
+			
+		if browser == "10": # Eric
+			print("Setting browser to eric")
+			browser = "eric"
+			
+		if browser == "11": # Falkon
+			print("Setting browser to Falkon")
+			browser = "falkon"
+			
+		if browser == "12": # Firefox
+			print("Setting browser to Firefox")
+			browser = "firefox"
+		
+		if browser == "13": # GNOME Web
+			print("Setting browser to GNOME Web")
+			browser = "epiphany"
+			
+		if browser == "14": # IceCat
+			AUR = 1
+			print("AUR Package, not added yet")
+		
+		if browser == "15": # Chrome
+			AUR = 1
+			print("AUR Package, not added yet")
+			
+		if browser == "16": # Inox
+			AUR = 1
+			print("AUR Package, not added yet")
+			
+		if browser == "17": # Iridium
+			AUR = 1
+			print("AUR Package, not added yet")
+			
+		if browser == "18": # Konqueror
+			print("Setting browser to Konqueror")
+			browser = "konqueror"
+			
+		if browser == "19": # Liri
+			AUR = 1
+			print("AUR Package, not added yet")
+			
+		if browser == "20": # Midori
+			print("Setting browser to Midori")
+			browser = "midori"
+			
+		if browser == "21": # Min
+			print("Setting browser to Min")
+			browser = "min"
+		
+		if browser == "22": # Opera
+			print("Setting browser to Opera")
+			browser = "opera"
+			
+		if browser == "23": # Otter
+			AUR = 1
+			print("AUR Package, not added yet")
+			
+		if browser == "24": # Palemoon
+			print("Setting browser to Palemoon")
+			browser = "palemoon"
+			
+		if browser == "25": # qutebrowser
+			print("Setting browser to qutebrowser")
+			browser = "qutebrowser"
+		
+		if browser == "26": # Seamonkey
+			print("Setting browser to Seamonkey")
+			browser = "seamonkey"
+			
+		if browser == "27": # Slimjet
+			AUR = 1
+			print("AUR Package, not added yet")
+			
+		if browser == "28": # Surf
+			print("Setting browser to surf")
+			browser = "surf"
+			
+		if browser == "29": # Ungoogled Chromium
+			AUR = 1
+			print("AUR Package, not added yet")
+			
+		if browser == "30": # Vivaldi
+			AUR = 1
+			print("AUR Package, not added yet")
+			
+		if browser == "31": # Waterfox
+			AUR = 1
+			print("AUR Package, not added yet")
+			
+		if browser == "b": step = 2 # Back
+		
+		else:
+			print("Setting browser to none")
+			desktop = ""
+		
+		time.sleep(1)
+		clear()
+		step = 4
+		
+	if step == 4: # Other Programs, Not functional yet
+		step = 5
+		
+	if step == 5: # AUR Stuff
+		if AUR != 1:
+			print("""Would you like to install an AUR helper?
+			1) Yes
+			2) No
+			b) Back
+			""")
+			
+			aur = input()
+			
+			if aur == b:
+				step = 4
+			elif aur == 1: 
+				print("AUR Enabled")
+				AUR == 1:
+				step = 6
+			else: 
+				print("AUR Disabled")
+				AUR = 0
+				step = 6
+				
+	if step == 6: # AUR Helper
+		if AUR == 1:
+			print("""Please choose an AUR helper
+			
+			1) pacaur
+			2) pikaur
+			3) trizen
+			4) yay
+			""")
+			helper = input()
+			
+			
+			
+		
